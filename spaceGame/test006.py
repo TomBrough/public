@@ -11,6 +11,10 @@ from controls import *
 
 # Description:
 
+# Added constallation Tux.
+# Configured array of space buoy's for "space race" training mission.
+# Fixed space craft on view portal and move objects in relation to
+# speed / direction of space craft.
 
 i = 0
 speed = 20
