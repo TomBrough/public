@@ -30,7 +30,10 @@ buoys = [( 413, -915, 0),( 451,-1284, 1),( 612,-1584, 2),( 772,-1849, 3),
          ( 198,-3445,28),( 183,-3736,29),( 186,-4017,30),( 245,-4300,31),
          ( 434,-4502,32),( 727,-4615,33),(1020,-4664,34),(1337,-4656,35),
          (1655,-4623,36),(1964,-4599,37),(2257,-4559,38),(2591,-4518,39),
-         (2886,-4436,40)]
+         (2886,-4436,40),(3155,-4363,41),(3424,-4290,42),(3733,-4185,43),
+         (4083,-4113,44),(4344,-4121,45),(4580,-4137,46),(4760,-4282,47),
+         (4875,-4509,48),(4749,-4743,49),(4486,-4790,50),(4221,-4765,51),
+         (4013,-4620,52)]
 buoy_sprites = []
 
 
@@ -52,7 +55,8 @@ controls = Controls(top)
 
 ss = Sprite(space,"images/ss/ship_rotate",150,150,0)
 #tpod = PodSprite(space,"images/tpod/tpod",230,0,0)
-btux = Sprite(space,"images/small_tux",300,-1200,0,1)
+constelation_tux = Sprite(space,"images/constelation_tux",300,-1200,0,1)
+constelation_rp  = Sprite(space,"images/constelation_raspberry_pi",1800,-2300,0,1)
 
 for b in buoys:
     (bx,by,bindex) = b
@@ -64,7 +68,12 @@ top.update()
 
 while(play):
 
-    btux.move(btux.x - ss.offset_x,btux.y - ss.offset_y,0)
+    constelation_tux.move(constelation_tux.x - ss.offset_x,
+                          constelation_tux.y - ss.offset_y,0)
+
+    constelation_rp.move(constelation_rp.x - ss.offset_x,
+                         constelation_rp.y - ss.offset_y,0)
+
     # Get an event (returns None if there are none...)
 
     event = controls.get_event()
